@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tasty Bites Restaurant</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+
+<style>
+/* Global */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+    background: url("https://images.unsplash.com/photo-1414235077428-338989a2e8c0") no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+}
+
+/* Overlay for readability */
+body::before {
+    content: "";
+    position: fixed;
+    top:0; left:0; width:100%; height:100%;
+    background: rgba(0,0,0,0.5);
+    z-index: -1;
+}
+
+/* NAVBAR */
+nav {
+    background: rgba(0,0,0,0.7);
+    padding: 15px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #FFDD59;
+    transform: scale(1.1);
+}
+
+/* HEADER */
+.header {
+    text-align: center;
+    color: #fff;
+    padding: 80px 20px 50px 20px;
+    font-family: 'Pacifico', cursive;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.header h1 {
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 20px;
+}
+
+/* OPEN / CONTACT SECTIONS */
+.open-section {
+    background: rgba(255,255,255,0.95);
+    padding: 40px;
+    margin: 60px auto;
+    width: 70%;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+/* MENU CONTAINER */
+.menu-container {
+    width: 85%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* MENU SECTION CARD */
+.menu-section {
+    background: rgba(255,255,255,0.95);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.menu-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.menu-section img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.menu-section h2 {
+    color: #e63946;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #e63946;
+    padding-bottom: 5px;
+}
+
+.menu-section input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+/* ORDER BUTTON */
+.order-btn {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.order-btn button {
+    background: #e63946;
+    color: #fff;
+    padding: 12px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.order-btn button:hover {
+    background: #FF6B6B;
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .header h1 {
+        font-size: 45px;
+    }
+    nav a {
+        margin: 0 10px;
+        font-size: 16px;
+    }
+    .open-section {
+        width: 90%;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+<a href="#home">Home</a>
+<a href="#menu">Menu</a>
+<a href="#contact">Contact</a>
+<a href="#about">About</a>
+<a href="restaurant.html">Back</a>
+</nav>
+
+<!-- HOME SECTION -->
+<section id="home">
+<div class="header">
+<h1>pure veg tadkaRestaurant</h1>
+<p>Delicious food, fresh ingredients, happy customers!</p>
+</div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section id="about">
+<div class="open-section">
+<h2>About Us</h2>
+<p>
+Pure veg tadka Restaurant is dedicated to serving the freshest and most delicious meals. 
+We take pride in our fast service, cozy ambiance, and high-quality food that keeps our customers coming back.
+</p>
+</div>
+</section>
+
+
+<!-- MENU SECTION -->
+<section id="menu">
+<div class="menu-container">
+
+<!-- Starters -->
+<div class="menu-section">
+<h2>Starters</h2>
+<img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7" alt="Veg Meal">
+<input type="checkbox" name="food" value="Paneer Tikka"> Shevga - ₹140 <br>
+<input type="checkbox" name="food" value="Paneer Kadai"> Paneer Kadai - ₹150 <br>
+<input type="checkbox" name="food" value="Paneer Tikka"> Paneer Tikka - ₹180 <br>
+<input type="checkbox" name="food" value="Kaju Katri"> Bharit - ₹120 <br>
+<input type="checkbox" name="food" value="Kaju Paneer"> Kaju Paneer - ₹160 <br>
+<input type="checkbox" name="food" value="Roti"> Roti - ₹15 <br>
+<input type="checkbox" name="food" value="chaval"> chaval - ₹70 <br>
+
+</div>
+
+<!-- Main Course -->
+<div class="menu-section">
+<h2>Main Course</h2>
+<img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d" alt="Papad">
+
+<input type="checkbox" name="food" value="Veg Pizza"> Veg Pizza - ₹150 <br>
+<input type="checkbox" name="food" value="Pasta"> Pasta - ₹120 <br>
+<input type="checkbox" name="food" value="Salad Pizza"> Salad - ₹100 <br>
+<input type="checkbox" name="food" value="Burger"> Burger vegeis - ₹110 <br>
+<input type="checkbox" name="food" value="Cheese Burger"> Cheese Burger - ₹150 <br>
+<input type="checkbox" name="food" value="Salad Pizza"> Salad Pizza - ₹100 <br>
+<input type="checkbox" name="food" value="Burger"> Burger - ₹110 <br>
+
+</div>
+
+<!-- Papad -->
+<div class="menu-section">
+<h2>Papad</h2>
+<img src="papad1.jpg" alt="Main Course">
+<input type="checkbox" name="food" value="Cheese Papad"> Cheese Papad - ₹20 <br>
+<input type="checkbox" name="food" value="Fried Papad"> Fried Papad - ₹40 <br>
+<input type="checkbox" name="food" value="Masala Papad"> Papad - ₹30 <br>
+<input type="checkbox" name="food" value="Fried Papad"> Krunch Papad - ₹40 <br>
+<input type="checkbox" name="food" value="Masala Papad"> Masala Papad - ₹30 <br>
+</div>
+
+<!-- Dessert -->
+<div class="menu-section">
+<h2>Dessert</h2>
+<img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb" alt="Dessert">
+<input type="checkbox" name="food" value="Ice Cream"> Black Ice Cream - ₹50 <br>
+<input type="checkbox" name="food" value="Kheer"> Kaju Kheer - ₹100 <br>
+<input type="checkbox" name="food" value="Vanilla Ice Cream"> Vanilla Ice Cream - ₹90 <br>
+<input type="checkbox" name="food" value="Kheer"> Kheer - ₹100 <br>
+<input type="checkbox" name="food" value="Vanilla Ice Cream"> Chocolate Ice Cream - ₹90 <br>
+<input type="checkbox" name="food" value="Ice Cream"> Ice Cream - ₹50 <br>
+
+</div>
+
+</div>
+
+<div class="order-btn">
+<button>Order Now</button>
+</div>
+</section>
+
+
+<script>
+document.querySelector(".order-btn button").onclick = function(){
+    let items = document.querySelectorAll('input[name="food"]:checked');
+    let order = "";
+    let count = 0;
+    let total = 0;
+
+    items.forEach(function(item){
+        let line = item.nextSibling.textContent.trim();
+        let price = line.match(/₹(\d+)/);
+        if(price){
+            total += parseInt(price[1]);
+        }
+
+        order += item.value + " - ₹" + price[1] + "\n";
+        count++;
+    });
+
+    if(count === 0){
+        alert("Please select at least one item.");
+    } else {
+        alert(
+            "You ordered:\n" + order +
+            "\nTotal items: " + count +
+            "\nTotal Price: ₹" + total +
+            "\n\nOrder submitted successfully!"
+        );
+    }
+}
+</script>
+
+<!-- CONTACT SECTION -->
+<section id="contact">
+<div class="open-section">
+<h2>Contact</h2>
+<p>Email: abc@gmail.com</p>
+<p>Phone: +91 9876543210</p>
+<p>Address: 123 Food Street, Mumbai, India</p>
+</div>
+</section>
+
+</body>
+</html>
